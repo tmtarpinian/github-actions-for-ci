@@ -1,1 +1,2 @@
 name: Catan Stat's PR approval workflow
+on: pull_request_review

@@ -2,4 +2,12 @@ name: Catan Stat's PR approval workflow
 on: pull_request_review
 jobs:
   labelWhenApproved:
+    name: Automate PR Approvals
     runs-on: ubuntu-latest
+    steps:
+      - name: Automate PR Approvals
+        uses: pullreminders/label-when-approved-action@main
+        env:
+          APPROVALS: "1"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ADD_LABEL: "PR Approved"
